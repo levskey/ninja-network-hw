@@ -12,6 +12,8 @@ route::get('/register', [AuthController::class, 'showRegister'])->name('show.reg
 route::get('/login', [AuthController::class, 'showLogin'])->name('show.login');
 route::post('/register', [AuthController::class, 'Register'])->name('register');
 route::post('/login', [AuthController::class, 'Login'])->name('login');
+route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 
 Route::get('/ninjas', [NinjaController::class, 'index'])->name('ninjas.index');
 Route::get('/ninjas/create', [NinjaController::class, 'create'])->name('ninjas.create');
